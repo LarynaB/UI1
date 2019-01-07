@@ -1,26 +1,9 @@
-/* Lets take our knowledge of CSS selectors, properties, and inheritance to add some style to the Sweet Eats Bakery website.  
 
-Task 1: Fork this pen.  You will want to have your own version saved.
-
-Task 2: Explore the CSS.  Look at all the unique selectors.  Find things that are new to you and learn what they do.  Find properties you may not be familiar with and google them.
-
-Task 3: Update the CSS.  You will notice the CSS comments throughout the file below.  Follow the instructions to complete the Sweet Eats Bakery site.  If you follow the instructions, you should see this as a final result:
-
-https://tk-assets.lambdaschool.com/44f6a520-b218-4ed1-910b-f4dc876cd1a6_sweet-eats-home-page.png
-
-Stretch Task: Fork your final work and see how much you can change the design without changing the HTML.  Try to transform the site by only using CSS selectors.
-
-Stretch Task: Look at CSS animations and see if you could integrate them on the navigation hovers.
-
-Stretch Task: Pick a navigation item and create a new page with the same header and footer as the home page.  Example: you could make a new page just for cookies.  Be creative and have fun coming up with your own unique content and styles. 
-
-*/
-
-
-/*======= Create a new universal selector that changes the font color to: #3C373B */
 *{
    color: #3c373b;
+  background-color: pink;
 }
+
 
 h1 {
   font-family: 'Gaegu', cursive;
@@ -32,8 +15,8 @@ h1 {
 
 h2, h3, h4, h5, h6 {
   font-family: 'Gaegu', cursive;
-  margin-bottom: 0;
-  padding: 0 10px;
+  margin-bottom: 10px;
+  padding: 10px 10px;
   /*=======  Update the font size to 30px */
   font-size: 30px;
 }
@@ -52,12 +35,13 @@ line-height: 1.4;
 
 /*======= Create a selector for ALL images in the site to have the following styles: */
 img {
-border-radius: 10px;
+border-radius: 50px;
 }
 
 
 .content-row {
   display: flex;
+  flex-direction: row-reverse;
 }
 
 .content-row div {
@@ -77,17 +61,31 @@ border-radius: 10px;
   padding: 20px;
   display: inline-block;
   border-radius: 20px;
-  color: white;
+  color: green;
   text-decoration: none;
   margin-bottom: 20px;
    /*======= create a background property. Set the value to #F87B99 */
   background-color: #f87b99;
+  
+  
 }
 
 .container header nav a:hover {
   background-color: white;
   color: pink;
-/*======= create a background property and set it to white.  Then create a color property and set it's value to pink. */
+  animation-name: slidein;
+  animation-duration: 1s;
+}
+@keyframes slidein {
+  from {
+    margin-left: 5%;
+    width: 2%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 0%;
+  }
 }
 
 /*======= Create a selector for the about section to have the following styles:
